@@ -15,7 +15,7 @@ FlowRouter.route('/:pageName', {
   name: 'pages',
   triggersEnter: [function () {
     Meteor.defer(function () {
-      $('main').addClass('light-theme');
+      $('main').removeClass('dark-theme').addClass('light-theme');
     });
   }],
   action: function(params){
@@ -28,7 +28,7 @@ FlowRouter.route('/tutorials/:pageName', {
     name: 'tutorials',
     triggersEnter: [function () {
       Meteor.defer(function () {
-        $('main').addClass('dark-theme');
+        $('main').removeClass('light-theme').addClass('dark-theme');
       });
     }],
     action: function(params) {
